@@ -49,8 +49,13 @@ main        { printf("%s ", yytext); }
 
 true|false  { printf("boolconstant ");} 
 
-"+"         { printf("plus "); }
-"-"         { printf("minus "); }
+"++""+"+    { printf("error "); }
+"=+"        { printf("binary "); }
+"=-"        { printf("binary "); }
+"++"        { printf("binary "); }
+"--"        { printf("binary "); }
+"+"         { printf("unary "); }
+"-"         { printf("unary "); }
 "*"         { printf("multiplication "); }
 "/"         { printf("division "); }
 "<="        { printf("lessequal "); }
